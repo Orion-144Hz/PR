@@ -1,15 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bahis Prototipi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahis Oyunu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .form-container {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 300px;
+            background-color: #fff;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bahis Oyununa Hoş Geldiniz!</h1>
-    <form method="POST" action="/bet">
-        <label>Takım Seçin:</label><br>
-        <input type="radio" name="team" value="A"> Takım A<br>
-        <input type="radio" name="team" value="B"> Takım B<br><br>
-        <input type="submit" value="Bahis Yap">
-    </form>
+    <h1>Bahis Oyunu</h1>
+    <div class="form-container">
+        <p>Bahis yapmak için bir takım seçin:</p>
+        <select id="teamSelect">
+            <option value="Takım A">Takım A</option>
+            <option value="Takım B">Takım B</option>
+        </select>
+        <br><br>
+        <button onclick="placeBet()">Bahis Yap</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
